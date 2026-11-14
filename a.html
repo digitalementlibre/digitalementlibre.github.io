@@ -1,0 +1,7 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ajouter au calendrier</title>
+<body style="font-family:-apple-system,sans-serif;text-align:center;padding:40px 20px">
+<p>Ouverture du calendrier…</p>
+<script>
+var p=new URLSearchParams(location.search),d=(p.get('d')||'').replace(/\D/g,''),l=p.get('l')==='en'?'en':'fr';
+if(d.length===8)location.replace('/'+l+'/'+d+'.ics');
+</script></body></html>
